@@ -1,6 +1,6 @@
 Python Script to download all comics from theoatmeal.com
 
-It downloads each comic to folder "OatmealComics/ComicName" where ComicName is the name of the comic.
+It downloads each comic to seperate folder "OatmealComics/ComicName" where ComicName is the name of the comic.
 It DOES NOT download comics which are already downloaded, incase you run the script again.
 
 Usage is as follows:

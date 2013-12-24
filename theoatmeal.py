@@ -20,7 +20,7 @@ oatmealdir = dir +"\\OatmealComics"
 if not os.path.exists(oatmealdir):
         os.makedirs(oatmealdir)
 
-for url_range in range(1,20):
+for url_range in range(1,15):
 
     main_url = "http://theoatmeal.com/comics_pg/page:" + str(url_range)
     print "Entered Page " + str(url_range)
