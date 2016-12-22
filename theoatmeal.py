@@ -2,11 +2,8 @@
 # Name:        theoatmeal downloader
 # Purpose:  Download all comics from theoatmeal.com
 #
-# Author:      Manoj
+# Author:      Manoj | Edited by Parin Vachhani
 #
-# Created:
-# Copyright:   (c) www.manojmj.com
-# Licence:
 #-------------------------------------------------------------------------------
 
 from bs4 import BeautifulSoup
@@ -15,7 +12,7 @@ import os
 import sys
 
 dir = os.path.dirname(os.path.abspath(__file__))
-oatmealdir = dir +"\\OatmealComics"
+oatmealdir = dir +"/OatmealComics"
 
 if not os.path.exists(oatmealdir):
         os.makedirs(oatmealdir)
@@ -59,7 +56,7 @@ for url_range in range(1,15):
         comicname = comicname.replace('*','')
         comicname = comicname.replace('"','')
 
-        comicdir = dir +"\\OatmealComics\\"+ comicname
+        comicdir = dir +"/OatmealComics/"+ comicname
 
         if not os.path.exists(comicdir):
             print " Downloading "+comicname
@@ -82,4 +79,4 @@ for url_range in range(1,15):
                 path = os.path.join(comicdir,filename)
                 with open (path,"wb") as data:
                     data.write(img_data)
-        print "Completed Download of Comic :"+comicname
+print "Completed Download of Comic :"+comicname
