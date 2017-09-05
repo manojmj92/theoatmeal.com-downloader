@@ -25,7 +25,7 @@ for url_range in range(1,15):
     main_url_opener = urllib.urlopen(main_url)
     main_url_response = main_url_opener.read()
 
-    main_url_soup = BeautifulSoup(main_url_response)
+    main_url_soup = BeautifulSoup(main_url_response,"lxml")
     mylist = []
     for comiclink in main_url_soup.find_all('a'):
         all_links = comiclink.get('href')
@@ -48,7 +48,7 @@ for url_range in range(1,15):
         opener = urllib.urlopen(url)
         response = opener.read()
 
-        soupedversion = BeautifulSoup(response)
+        soupedversion = BeautifulSoup(response,"lxml")
 
         comicname = soupedversion.title.string
         comicname = comicname.replace('?','')
